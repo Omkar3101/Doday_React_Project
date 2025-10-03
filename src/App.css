@@ -7,7 +7,7 @@
   height: 100vh; /* App container ko poori screen height do */
   padding: 20px;
   max-width: 1200px; /* Desktop par content ko bahut zyada failne se roko */
-  margin: 0 auto; /* Center the app container *//
+  margin: 0 auto; /* Center the app container */
 }
 
 header {
