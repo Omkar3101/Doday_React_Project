@@ -1,0 +1,141 @@
+/* --- BASE BUTTON STYLES (For all buttons) --- */
+.add-btn,
+.filter-button,
+.delete-btn,
+.edit-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* --- ADD BUTTON --- */
+.add-btn {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 25px;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.add-btn:hover {
+  opacity: 0.8;
+}
+
+/* --- FILTER BUTTON --- */
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 50px; /* Rounded shape */
+}
+
+.filter-button:hover {
+  background-color: #f0f0f0; /* Slight hover effect for non-active buttons */
+}
+
+.active-filter {
+  background-color: gainsboro;
+  border-radius: 50px;
+}
+
+.filter-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.filter-button p {
+  font-size: 25px;
+  margin: 0; /* Remove default paragraph margin */
+}
+
+/* --- EDIT & DELETE ICON BUTTONS --- */
+.delete-btn,
+.edit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px; /* Add some padding to make them easier to click */
+  border-radius: 50%; /* Make them circular */
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Hover effect */
+}
+
+.delete-btn img,
+.edit-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* ============================================= */
+/* ---         RESPONSIVE STYLES             --- */
+/* ============================================= */
+
+/* --- For Tablets (and smaller devices) --- */
+@media (max-width: 768px) {
+  /* Reduce font size and padding for Add Button */
+  .add-btn {
+    font-size: 20px;
+    padding: 10px 18px;
+  }
+
+  /* Reduce font size, padding, and icon size for Filter Buttons */
+  .filter-button {
+    padding: 8px 16px;
+    gap: 8px;
+  }
+  .filter-button p {
+    font-size: 20px;
+  }
+  .filter-button img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Reduce icon size for Edit/Delete Buttons */
+  .delete-btn img,
+  .edit-btn img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+/* --- For Mobile Phones --- */
+@media (max-width: 480px) {
+  /* Further reduce font size and padding for Add Button */
+  .add-btn {
+    font-size: 16px;
+    padding: 12px 16px; /* A bit more vertical padding for easier tapping */
+  }
+
+  /* --- ICON-ONLY FILTER BUTTONS ON MOBILE --- */
+  /* On small screens, we hide the text to save space! */
+  .filter-button p {
+    display: none; 
+  }
+
+  .filter-button {
+    padding: 10px; /* Make the button circular and icon-only */
+    gap: 0;
+  }
+
+  .filter-button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Further reduce icon size for Edit/Delete Buttons */
+  .delete-btn img,
+  .edit-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}

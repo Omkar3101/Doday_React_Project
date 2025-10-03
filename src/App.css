@@ -1,0 +1,102 @@
+/* App.css */
+
+.app {
+  /* Layout ko control karne ke liye Flexbox ka istemal */
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* App container ko poori screen height do */
+  padding: 20px;
+  max-width: 1200px; /* Desktop par content ko bahut zyada failne se roko */
+  margin: 0 auto; /* Center the app container *//
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  flex-shrink: 0; /* Is section ko shrink hone se roko */
+}
+
+h1, h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.input-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 10px 20px 10px;
+  flex-shrink: 0;
+}
+
+/* Yeh naya container hai jo Todo list ko hold karega */
+.todo-list-container {
+  flex-grow: 1; /* Bachi hui saari vertical space le lo */
+  overflow: hidden; /* Yeh zaroori hai, iske bina scrolling kaam nahi karegi */
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 40px;
+    order: 2; /* "Today" ko neeche rakho */
+  }
+
+  h3 {
+    font-size: 24px;
+    order: 1; /* Date ko upar rakho */
+  }
+
+  header .profile-container { /* Assuming your profile component has this class */
+    order: 3;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+    flex-wrap: wrap; /* Agar buttons fit na ho to wrap karo */
+  }
+}

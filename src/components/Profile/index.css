@@ -1,0 +1,13 @@
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.profile img{
+    width: 50px;
+}

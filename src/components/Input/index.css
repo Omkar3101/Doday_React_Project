@@ -1,0 +1,13 @@
+#task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input{
+    height: 60px;
+    width: 80vw;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+}

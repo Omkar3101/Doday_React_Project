@@ -1,0 +1,71 @@
+/* Todo/index.css */
+
+#todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px; /* Sides me thoda padding */
+  
+  /* --- SCROLLING LOGIC --- */
+  height: 100%; /* Apne container ki poori height le lo */
+  overflow-y: auto; /* Sirf vertical scroll enable karo */
+
+  /* --- HIDDEN SCROLLBAR TRICK --- */
+  /* For Chrome, Safari, Edge */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* For Firefox */
+  scrollbar-width: none;
+  /* For IE and old Edge */
+  -ms-overflow-style: none;
+}
+
+.todo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 20px 10px;
+  border-bottom: 1px solid black; /* Thodi transparent border */
+}
+
+.todo-text {
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-grow: 1; /* Text ko saari available space do */
+  word-break: break-word; /* Lambe words ko wrap karo */
+}
+
+/* Edit/Delete buttons ko ek saath group karne ke liye */
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.todo .edit-btn,
+.todo .delete-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.todo:hover .edit-btn,
+.todo:hover .delete-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .todo-text {
+    font-size: 20px;
+  }
+  .todo {
+    padding: 15px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-text {
+    font-size: 18px;
+  }
+}
