@@ -8,7 +8,7 @@
 
 body, html {
   /* 1. Background image properties */
-  background-image: url('./assets/background.png');
+  background-image: url('./assets/Background.png');
   background-size: cover; /* Image ko poora area cover karne ke liye */
   background-position: center center; /* Image ko center mein rakhta hai */
   background-repeat: no-repeat; /* Image ko repeat hone se rokta hai */
