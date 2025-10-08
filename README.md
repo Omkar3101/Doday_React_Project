@@ -24,7 +24,7 @@ A modern, responsive todo web app built with React.js to help you organize and t
 
 ## License
 
-This project is licensed under the MIT License – see the LICENSE file for details.
+This project is licensed under the MIT [License](https://github.com/Omkar3101/Doday_React_Project/blob/main/LICENSE) – see the LICENSE file for details.
 
 ## Live Demo
 
